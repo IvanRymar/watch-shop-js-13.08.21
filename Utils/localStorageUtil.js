@@ -26,8 +26,8 @@ class LocalStorageUtils{/*two methods: 1. returns the contents of the local stor
        let index = products.indexOf(id); /*checking for the presence of the given id in the local storage, getting its index in local storage*/
        let pushProduсts = false;
 
-       if (index !== -1){/*add this item to local storage =>"Add to basket"*/
-            products.push('id');
+       if (index === -1){/*add this item to local storage =>"Add to basket"*/
+            products.push(id);
             pushProduсts = true;/*item selected*/
        }
        else{ /*the selected item is present in local storage*/

@@ -10,14 +10,15 @@ class Products {
 
     handleSetLocationStorage(element, id){
         const {pushProducts, products} = localStorageUtils.putProducts(id);/*!!!*/
-
+        console.log(pushProducts);
         if (pushProducts){
-            element.classList.add('this.classNameActive');
+            element.classList.add(this.classNameActive);
             element.innerHTML = this.labelRemove;
         }
         else{
-            element.classList.remove('this.classNameActive');
+            element.classList.remove(this.classNameActive);
             element.innerHTML = this.labelAdd;
+            // headerPage.render(products.length);
         }
     }
 
@@ -35,13 +36,13 @@ class Products {
             }
             else{
                 activeText = this.labelRemove; /*no => inscription "Remove from basket"*/
-                activeClass = this.classNameActive;
+                activeClass = ' ' + this.classNameActive;
             }
             htmlCatalog += `
                 <li class="products-element">
-                    <span class="produts-element__name">${name}</span>
-                    <img src="${img}" alt="" class="produts-element__img">
-                    <span class="produts-element__price">${price}</span>
+                    <span class="products-element__name">${name}</span>
+                    <img src="${img}" alt="" class="products-element__img">
+                    <span class="products-element__price">${price}</span>
                     <button class="products-element__btn${activeClass}" onclick="productsPage.handleSetLocationStorage(this, '${id}')">${activeText}</button>
                 </li>
             `;

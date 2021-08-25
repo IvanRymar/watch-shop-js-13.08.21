@@ -1,4 +1,4 @@
-class Header{
+/*class Header{
 
     handlerOpenShoppingPage(){
         // shoppingPage.render();
@@ -10,4 +10,4 @@ class Header{
     }
 }
 
-const headerPage = new Header();
+const headerPage = new Header();*/
