@@ -35,6 +35,7 @@ class LocalStorageUtils{/*two methods: 1. returns the contents of the local stor
        }
 
        localStorage.setItem(this.keyName, JSON.stringify(products));
+       console.log(pushProduсts);
        return {pushProduсts, products};
 
     }

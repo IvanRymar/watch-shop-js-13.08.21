@@ -9,17 +9,17 @@ class Products {
 
 
     handleSetLocationStorage(element, id){
-        const {pushProducts, products} = localStorageUtils.putProducts(id);/*!!!*/
-        console.log(pushProducts);
-        if (pushProducts){
+        const {pushProduсts, products} = localStorageUtils.putProducts(id);/*!!!*/
+        console.log(pushProduсts);
+        if (pushProduсts){
             element.classList.add(this.classNameActive);
             element.innerHTML = this.labelRemove;
         }
         else{
             element.classList.remove(this.classNameActive);
             element.innerHTML = this.labelAdd;
-            // headerPage.render(products.length);
-        }
+            }
+        headerPage.render(products.length);
     }
 
 
